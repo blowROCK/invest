@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Invest :investList="investList"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Invest from "./components/Invest.vue";
+import Data from "./assets/itemList.json";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Invest
+  },
+  data(){
+    return{
+      investList: Data
+    }
   }
-}
+};
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("App.css");
 </style>

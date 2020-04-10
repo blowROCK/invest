@@ -1,0 +1,32 @@
+@import url("~reset-css/reset.css");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+body { 
+    font-family: 'Spoqa Han Sans', 'Sans-serif'; 
+}
+
+div{
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 14px;
+    color: #222222;
+}
+h1{
+    color: #222222;
+    letter-spacing: -1px;
+}
+h2{
+    letter-spacing: -1px;
+    color: #222222;
+}
+.bold{
+    font-weight: bold;
+}
+.bar{
+    background-color: #666666;
+}
+.pointer{
+    cursor: pointer;
+}

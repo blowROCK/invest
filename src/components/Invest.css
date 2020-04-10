@@ -1,0 +1,300 @@
+.invest-header{
+    height: 200px;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 52px 0;
+}
+.invest-type{
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 -1px 0 0 #e1e1e1;
+    background-color: #ffffff;
+    display: flex;
+    padding: 14px 0 14px 40px;
+    margin: 0 auto;
+}
+.invest-type .typeTitle{
+    padding-right: 60px;
+}
+.invest-type .bar{
+    width: 1px;
+    height: 15px;
+}
+.invest-type .checkboxes{
+    display: flex;
+}
+.invest-type .checkboxes label{
+    margin-left: 40px;
+}
+.invest-type .allBox{
+    margin-right: 35px;
+}
+.invest-type h3{
+    height: 20px;
+}
+.invest-type label{
+    display: flex;
+    align-items: center;
+}
+.invest-type input{
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    background: none;
+    -webkit-appearance: none;
+    border: 1px solid #808080;
+    position: relative;
+}
+.invest-type input:checked::after{
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    content: "";
+    width: 10px;
+    height: 3px;
+    border: 2px solid #3d6afe;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+}
+.invest-selected{
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+}
+.invest-selected .selectedItem{
+    padding: 10px 10px 10px 0;
+    display: flex;
+}
+
+.invest-selected .selectedItem .times{
+    position: relative;
+    margin-right: 25px;
+    color: #666;
+    cursor: pointer;
+
+}
+.invest-selected .selectedItem .times::after{
+    content: '\d7';
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    color: #666;
+    line-height: 8px;
+    font-size: 20px;
+}
+.invest-contents{
+    margin: 0 auto;
+    width: 1100px;
+}
+.invest-result{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.invest-result .number{
+    color: #3d6afe
+}
+.invest-result .orders{
+    display: flex;
+}
+.invest-result .orders .bar{
+    margin: 0 10px;
+    width: 1px;
+    height: 14px;
+}
+.invest-result .orders .order{
+    margin: 0 10px;
+}
+.invest-result .orders .order.active{
+    color: #3d6afe;
+}
+
+.invest-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+}
+.invest-list .invest-card{
+    width: 350px;
+    height: 414px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+    margin: 0 16px 24px 0;
+}
+.invest-card .thumnail{
+    object-fit: cover;
+    height: 195px;
+    position: relative;
+}
+.invest-card .thumnail img{
+    width: 100%;
+    height: 100%;
+}
+.invest-card .thumnail .badge{
+    position: absolute;
+    width: 72px;
+    height: 24px;
+    background-color: #ee1d62;
+    text-align: center;
+}
+
+.invest-card .thumnail .badge p{
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.invest-card .wrap-progress{
+    height: 6px;
+    background: #e1e1e1;
+    position: relative;
+}
+.wrap-progress .bubble{
+    display: none;
+    position: absolute;
+    width: 62px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #3d6afe;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    top: -29px
+}
+.wrap-progress .bubble.on{
+    display: block;
+}
+.wrap-progress .bubble.left{
+    border-bottom-left-radius: 0;
+}
+.wrap-progress .bubble.right{
+    border-bottom-right-radius: 0;
+}
+.wrap-progress .bubble::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.wrap-progress .bubble.left::before{
+    left: 0;
+    bottom: -4px;
+    border-color: #3d6afe transparent transparent #3d6afe;
+    border-style: solid;
+    border-width: 4px;
+}
+.wrap-progress .bubble.center::before{
+    left: 50%;
+    bottom: -9px;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #3d6afe;
+}
+.wrap-progress .bubble.right::before{
+    right: 0;
+    bottom: -4px;
+    border-color: #3d6afe #3d6afe transparent transparent;
+    border-style: solid;
+    border-width: 4px;
+}
+.wrap-progress .bar{
+    background-image: linear-gradient(to right, #5ac3fc, #3d6afe);
+    height: 6px;
+}
+
+
+.invest-card .contents{
+    padding: 16px;
+    height: 213px;
+}
+.contents .wrap-tags{
+    height: 24px;
+    margin-bottom: 12px;
+    display: flex;
+}
+.contents .wrap-tags .tag{
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    height: 24px;
+    font-size: 12px;
+    padding: 5px 4px;
+    margin-right: 5px;
+    color: #666666;
+}
+.contents .wrap-data{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 14px;
+}
+.contents .wrap-data .bar-data{
+    width: 1px;
+    height: 14px;
+    margin: 0 17px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.contents .wrap-data div{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+}
+.contents .wrap-data div:last-child{
+    margin-right: 0;
+}
+.contents .wrap-data .main-data{
+    font-size: 30px;
+    font-weight: bold;
+    color: #3d6afe;
+}
+
+.contents .wrap-info{
+    margin-bottom: 16px;
+    height: 45px;
+}
+.contents .wrap-info h1{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.45;
+}
+
+.contents .wrap-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.contents .wrap-buttons button{
+    width: 155px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: none;
+    border: solid 1px #3d6afe;
+    color: #3d6afe;
+    font-size: 14px;
+}
+.contents .wrap-buttons button.blue{
+    border-radius: 4px;
+    background-color: #3d6afe;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.more-button{
+    width: 350px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #cccccc;
+    background-color: #ffffff;
+    margin: 60px auto;
+    text-align: center;
+    line-height: 38px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+}
